@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>DBS Prediction </title>
+  <link rel="stylesheet" href={{url_for('static',filename='css/main.css')}} > 
+</head>
+
+<body>
+ <div class="login">
+   <center>
+    <table> 
+      <tr><td align="center" valign="center"><img src={{url_for('static',filename='img/log.jpg')}} width="60%" height="60%"> </td></tr>
+      <tr><td align="center" valign="center">
+	<h1>Ruly - DBS Share Price Prediction</h1>
+
+    <form action="/predict"method="post">
+    	<input type="text" name="sgdValue" placeholder="Please enter Exchange Rate for SGD" required="required" />
+      
+
+        <button type="submit" id="btn">Predict</button>
+    </form>
+    <br>
+   <br>
+   <h1>{{ prediction_text }}</h1>
+</center>
+    </td></tr>
+    </table>
+
+   
+
+ </div>
+
+
+</body>
+</html>
